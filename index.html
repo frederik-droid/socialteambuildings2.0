@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Give a Day | Sociale teambuilding met impact</title>
+<meta name="description" content="Sociale teambuildings en bedrijfsvrijwilligerswerk op maat. Samen met je team steek je een halve of hele dag de handen uit de mouwen bij een goed doel.">
+<link rel="canonical" href="https://www.socialteambuildings.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Give a Day">
+<meta property="og:title" content="Give a Day | Sociale teambuilding met impact">
+<meta property="og:description" content="Sociale teambuildings en bedrijfsvrijwilligerswerk op maat, waar collega's bijdragen aan echte uitdagingen bij non-profitorganisaties.">
+<meta property="og:url" content="https://www.socialteambuildings.com/">
+<meta property="og:image" content="https://www.socialteambuildings.com/images/hero-renovatie.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/g-purple.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Give a Day","url":"https://www.socialteambuildings.com/","logo":"https://www.socialteambuildings.com/images/logo-purple.png","email":"info@giveaday.eu","sameAs":["https://www.giveaday.eu","https://www.instagram.com/giveaday.be","https://www.linkedin.com/company/give-a-day-belgium/","https://www.youtube.com/@giveaday9339"]}
+</script>
+
+<style>
+/* ============================================================
+   GIVE A DAY BRAND TOKENS (normaal niet aanpassen)
+   ============================================================ */
+@font-face { font-family: 'F37 Judge'; src: url('fonts/F37Judge-BoldCondensed.ttf') format('truetype'); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: 'Primed'; src: url('fonts/Primed.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+
+:root {
+  --lilac: #C194FF; --lime: #E5FC54; --black: #000; --ink: #0A0A0A; --white: #fff;
+  --blue: #2453FF; --cyan: #56D0D6; --green: #00EE62;
+  --lilac-dark: #6D3FBF;              /* lilac als tekst op wit */
+  --lilac-24: rgba(193,148,255,.24);
+  --gradient: linear-gradient(90deg,#2453FF 0%,#8E7BFF 14%,#C194FF 24%,#E5FC54 42%,#56D0D6 58%,#E5FC54 74%,#C194FF 86%,#2453FF 100%);
+
+  --bg: var(--white); --surface: #F5F3FA; --fg: var(--ink);
+  --fg-muted: rgba(10,10,10,.66); --fg-subtle: rgba(10,10,10,.48); --line: rgba(10,10,10,.12);
+  --accent-text: var(--lilac-dark);
+
+  --font-display: 'F37 Judge','Oswald','Arial Narrow',sans-serif;
+  --font-script: 'Primed','Kaushan Script',cursive;
+  --font-body: 'DM Sans',system-ui,sans-serif;
+  --r-md: 14px; --r-lg: 22px; --r-pill: 999px;
+  --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 28px rgba(0,0,0,.09);
+  --ease: cubic-bezier(.22,1,.36,1); --dur: 220ms; --wrap: 1160px;
+}
+[data-theme="dark"]  { --bg: var(--black); --surface: var(--ink); --fg: var(--white); --fg-muted: rgba(255,255,255,.72); --fg-subtle: rgba(255,255,255,.5); --line: rgba(255,255,255,.16); --accent-text: var(--lilac); }
+[data-theme="lilac"] { --bg: var(--lilac); --surface: rgba(255,255,255,.4); --fg: var(--ink); --fg-muted: rgba(10,10,10,.72); --fg-subtle: rgba(10,10,10,.55); --line: rgba(10,10,10,.18); --accent-text: var(--ink); }
+[data-theme="tint"]  { --bg: var(--surface); }
+
+/* ---------- basis ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-body); font-size: 17px; line-height: 1.5; background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+p { margin: 0 0 1em; } p:last-child { margin-bottom: 0; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+section { background: var(--bg); color: var(--fg); padding: 96px 0; }
+@media (max-width: 720px) { section { padding: 64px 0; } .wrap { padding: 0 20px; } }
+.gradbar { height: 10px; background: var(--gradient); }
+
+/* ---------- typografie ---------- */
+h1, h2, h3, .display { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; line-height: .92; letter-spacing: .01em; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.9rem, 7.5vw, 6.2rem); line-height: .88; }
+h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); max-width: 26ch; }
+h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1; letter-spacing: .02em; }
+.script { font-family: var(--font-script); font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1; color: var(--accent-text); }
+h2 .script { font-size: 1.12em; display: inline-block; padding: .05em .12em 0; }
+.eyebrow { font-weight: 600; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 14px; }
+.lead { font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.5; max-width: 60ch; color: var(--fg); }
+.copy p { max-width: 60ch; color: var(--fg); font-size: 17px; }
+.copy h2 { max-width: none; }
+.lead strong { color: var(--fg); font-weight: 600; }
+.muted { color: var(--fg-muted); }
+
+/* ---------- knoppen ---------- */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; border-radius: var(--r-pill); font-family: var(--font-body); font-weight: 700; font-size: 15px; line-height: 1; text-decoration: none; border: 1.5px solid transparent; cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease), filter var(--dur) var(--ease); }
+.btn:active { transform: scale(.97); }
+.btn .arr { font-size: 18px; line-height: 1; }
+.btn-lime { background: var(--lime); color: var(--black); }
+.btn-lime:hover { filter: brightness(.94); }
+.btn-lilac { background: var(--lilac); color: var(--black); }
+.btn-lilac:hover { filter: brightness(1.05); }
+.btn-black { background: var(--black); color: var(--white); }
+.btn-black:hover { background: #222; }
+.btn-ghost { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn-ghost:hover { background: var(--lilac); border-color: var(--lilac); color: var(--black); }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+/* ---------- header ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { width: 34px; }
+.brand span { font-family: var(--font-display); font-size: 1.3rem; text-transform: uppercase; letter-spacing: .02em; line-height: 1; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { text-decoration: none; font-weight: 500; font-size: 14.5px; color: var(--fg-muted); }
+.nav a:not(.btn):hover { color: var(--lilac-dark); }
+.nav .btn { padding: 11px 22px; font-size: 14px; color: var(--black); }
+.nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; font-family: var(--font-display); text-transform: uppercase; font-size: 1.1rem; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 74px; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; padding: 20px 24px 28px; gap: 18px; box-shadow: var(--shadow); }
+  .nav.open { display: flex; }
+  .nav a { font-size: 17px; color: var(--fg); }
+}
+
+/* ---------- hero: fullscreen foto met tekst erover ---------- */
+.hero { position: relative; padding: 0; min-height: min(86vh, 820px); display: flex; align-items: center; color: var(--white); background: var(--black) url('images/hero-renovatie.jpg') 72% 40% / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,.15) 100%); }
+.hero .wrap { position: relative; width: 100%; padding-top: 96px; padding-bottom: 96px; }
+.hero .inner { max-width: 560px; }
+.hero h1 { font-size: clamp(2.7rem, 5.6vw, 4.8rem); }
+.hero .eyebrow { color: var(--lime); }
+.hero h1 { margin-bottom: 24px; color: var(--white); }
+.hero .lead { color: rgba(255,255,255,.88); }
+.hero .lead strong { color: var(--white); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.hero .btn-ghost { color: var(--white); border-color: rgba(255,255,255,.6); }
+.hero .btn-ghost:hover { background: var(--white); border-color: var(--white); color: var(--black); }
+@media (max-width: 720px) {
+  .hero { min-height: 0; background-position: 60% 40%; }
+  .hero::before { background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.7) 100%); }
+  .hero .wrap { padding-top: 72px; padding-bottom: 72px; }
+}
+
+/* ---------- stats ---------- */
+.stats { padding: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 36px; padding-bottom: 36px; }
+.stat .n { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 3.4vw, 2.9rem); line-height: 1; }
+.stat .n em { font-style: normal; color: var(--lilac-dark); }
+.stat .c { font-size: 13.5px; color: var(--fg-subtle); margin-top: 8px; }
+@media (max-width: 760px) { .stats .wrap { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+
+/* ---------- generieke 2-koloms ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.two-col.top { align-items: start; }
+.two-col.stretch { align-items: stretch; }
+.photo.fill { height: 100%; aspect-ratio: auto; min-height: 380px; }
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr; gap: 36px; } }
+.photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--r-lg); }
+
+/* ---------- wat is het (zwart) ---------- */
+
+/* ---------- hoe werkt het ---------- */
+.steps { display: grid; gap: 14px; margin-top: 8px; }
+.step { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; background: var(--white); display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; }
+.step .num { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: .06em; padding: 7px 14px; border-radius: var(--r-pill); color: var(--black); white-space: nowrap; margin-top: 2px; }
+.step:nth-child(1) .num { background: var(--lime); }
+.step:nth-child(2) .num { background: var(--lilac); }
+.step:nth-child(3) .num { background: var(--cyan); }
+.step h3 { margin-bottom: 6px; }
+.step p { font-size: 15px; color: var(--fg-muted); }
+
+/* ---------- 12 werken ---------- */
+.works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+.work { position: relative; text-align: left; border: 1px solid var(--line); border-radius: var(--r-md); padding: 22px 22px 18px; background: var(--white); font-family: var(--font-body); cursor: pointer; box-shadow: var(--shadow); color: var(--fg); transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.work:hover { transform: translateY(-3px); border-color: var(--lilac); }
+.work .bar { display: block; height: 5px; width: 40px; border-radius: 3px; margin-bottom: 16px; }
+.work h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.work p { font-size: 14px; color: var(--fg-subtle); margin: 0 0 12px; }
+.work .more { font-size: 13px; font-weight: 700; color: var(--lilac-dark); }
+@media (max-width: 900px) { .works { grid-template-columns: 1fr 1fr; gap: 14px; } }
+@media (max-width: 560px) { .works { grid-template-columns: 1fr; } }
+
+dialog.workmodal { border: none; border-radius: var(--r-lg); padding: 0; max-width: 560px; width: calc(100% - 32px); background: var(--white); color: var(--ink); box-shadow: 0 24px 80px rgba(0,0,0,.28); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto; }
+dialog.workmodal::backdrop { background: rgba(10,10,10,.55); backdrop-filter: blur(3px); }
+.wm-head { padding: 26px 26px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.wm-head .bar { display: block; height: 6px; width: 46px; border-radius: 3px; margin-bottom: 14px; }
+.wm-head h3 { font-size: 1.7rem; line-height: .95; margin: 0; }
+.wm-sdg { display: inline-block; margin-top: 12px; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: var(--lilac-24); color: var(--lilac-dark); padding: 5px 12px; border-radius: var(--r-pill); }
+.wm-close { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); font-size: 18px; cursor: pointer; line-height: 1; }
+.wm-body { padding: 22px 26px 28px; }
+.wm-body p { color: var(--fg-muted); }
+.wm-body h4 { font-family: var(--font-display); text-transform: uppercase; font-size: 1rem; letter-spacing: .04em; margin: 22px 0 8px; }
+.wm-body ul { margin: 0 0 22px; padding-left: 20px; color: var(--fg-muted); }
+.wm-body li { margin-bottom: 4px; }
+
+/* ---------- waarom (lilac) ---------- */
+.reasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 44px; border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; background: rgba(255,255,255,.45); }
+.reason { padding: 26px 24px 28px; border-right: 1px solid var(--line); }
+.reason:last-child { border-right: 0; }
+.reason .script { display: block; font-size: 1.7rem; color: var(--ink); margin-bottom: 4px; }
+.reason h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.reason p { font-size: 15px; color: var(--fg-muted); }
+@media (max-width: 900px) { .reasons { grid-template-columns: 1fr 1fr; } .reason:nth-child(2) { border-right: 0; } .reason:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+@media (max-width: 520px) { .reasons { grid-template-columns: 1fr; } .reason { border-right: 0 !important; border-bottom: 1px solid var(--line); } .reason:last-child { border-bottom: 0; } }
+
+/* ---------- fotoband ---------- */
+.band { padding: 0; }
+.band .wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding-top: 0; padding-bottom: 0; }
+.band img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--r-lg); }
+.band .block { border-radius: var(--r-lg); background: var(--lime); color: var(--black); display: grid; align-content: center; justify-items: center; text-align: center; padding: 28px; aspect-ratio: 4/3; }
+.band .block .script { font-size: clamp(2rem, 3.4vw, 2.8rem); color: var(--black); line-height: 1.08; }
+.band .block .display { font-size: clamp(1.3rem, 2vw, 1.7rem); margin: 6px 0 0; }
+@media (max-width: 720px) { .band .wrap { grid-template-columns: 1fr 1fr; gap: 10px; } .band .block { grid-column: 1 / -1; order: 3; aspect-ratio: auto; padding: 24px; } }
+
+/* ---------- klanten (zwart) ---------- */
+.cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+.case { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 28px 26px 30px; background: var(--surface); }
+.case .co { font-weight: 600; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--lilac); margin-bottom: 18px; }
+.case .big { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.8rem, 2.6vw, 2.4rem); line-height: .92; color: var(--lime); margin-bottom: 16px; }
+.case p { font-size: 15.5px; color: var(--fg-muted); }
+@media (max-width: 900px) { .cases { grid-template-columns: 1fr; gap: 14px; } }
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+.quote { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px 24px; background: var(--surface); display: flex; flex-direction: column; }
+.quote .mark { font-family: var(--font-script); font-size: 2.4rem; line-height: .6; color: var(--lilac); display: block; margin-bottom: 18px; }
+.quote p { font-size: 16px; line-height: 1.5; color: var(--fg); flex: 1; }
+.quote cite { display: block; margin-top: 18px; font-style: normal; font-family: var(--font-display); text-transform: uppercase; font-size: 1rem; letter-spacing: .05em; color: var(--lilac); }
+@media (max-width: 900px) { .quotes { grid-template-columns: 1fr; gap: 14px; } }
+
+/* ---------- platform + handleiding ---------- */
+.tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px; }
+.track { border-radius: var(--r-lg); overflow: hidden; display: flex; flex-direction: column; }
+.track.a { background: var(--surface); border: 1px solid var(--line); }
+.track.b { background: var(--black) url('images/gradient.jpg') center/cover no-repeat; position: relative; color: var(--white); }
+.track.b::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+.track.b > * { position: relative; }
+.track .body { padding: 30px 30px 32px; display: flex; flex-direction: column; flex: 1; }
+.track.b .body { justify-content: center; }
+.track.b .body p { flex: 0; }
+.track .body .eyebrow { color: var(--lilac-dark); }
+.track.b .body .eyebrow { color: var(--lime); }
+.track .body p { color: var(--fg-muted); flex: 1; }
+.track.b .body p { color: rgba(255,255,255,.8); }
+.track .body .btn { align-self: flex-start; margin-top: 20px; }
+.track img.mock { padding: 28px 28px 0; }
+.track.b img.photo { aspect-ratio: 16/9; border-radius: 0; }
+@media (max-width: 900px) { .tracks { grid-template-columns: 1fr; } }
+
+/* ---------- over ons ---------- */
+.partners { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+.partners ul { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 36px; align-items: center; }
+.partners li { font-family: var(--font-display); text-transform: uppercase; font-size: 1.35rem; color: var(--fg-subtle); letter-spacing: .03em; }
+.partners li img { height: 40px; width: auto; }
+
+/* ---------- eindblok (zwart) ---------- */
+.cta-final { text-align: center; padding: 100px 0; }
+.cta-final .script { font-size: clamp(3rem, 8vw, 6.5rem); color: var(--lilac); display: block; line-height: 1; }
+.cta-final h2 { max-width: none; font-size: clamp(2.6rem, 6.5vw, 5rem); margin: 4px 0 20px; }
+.cta-final h2 .lm { color: var(--lime); }
+.cta-final .lead { margin: 0 auto 30px; max-width: 46ch; color: rgba(255,255,255,.8); }
+
+/* ---------- contact ---------- */
+.contact .two-col { grid-template-columns: .85fr 1.15fr; align-items: start; }
+@media (max-width: 900px) { .contact .two-col { grid-template-columns: 1fr; } }
+.contact-details { margin-top: 28px; font-size: 15px; color: var(--fg-muted); }
+.contact-details a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+label { font-size: 13.5px; font-weight: 600; }
+input, textarea, select { width: 100%; font: inherit; font-size: 16px; padding: 13px 15px; border: 1.5px solid var(--line); border-radius: var(--r-md); background: var(--white); color: var(--fg); }
+input::placeholder, textarea::placeholder { color: var(--fg-subtle); }
+input:focus, textarea:focus, select:focus { border-color: var(--blue); outline: none; }
+select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%230A0A0A' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+textarea { min-height: 130px; resize: vertical; }
+.check { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 400; grid-column: 1 / -1; }
+.check input { width: 20px; height: 20px; padding: 0; accent-color: var(--lilac-dark); }
+form .btn { grid-column: 1 / -1; justify-self: start; }
+.form-note { grid-column: 1 / -1; font-size: 15px; padding: 14px 16px; border-radius: var(--r-md); display: none; }
+.form-note.ok { display: block; background: var(--lime); color: var(--black); }
+.form-note.err { display: block; background: #FEE2E2; color: #7F1D1D; }
+.hp { position: absolute; left: -9999px; }
+@media (max-width: 560px) { form { grid-template-columns: 1fr; } .field.full { grid-column: auto; } }
+
+/* ---------- footer ---------- */
+footer { background: var(--black); color: var(--white); padding: 64px 0 36px; }
+.foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.foot h4 { font-family: var(--font-display); text-transform: uppercase; font-size: 1.05rem; letter-spacing: .04em; margin: 0 0 14px; color: var(--lilac); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+.foot a { text-decoration: none; color: rgba(255,255,255,.85); }
+.foot a:hover { text-decoration: underline; color: var(--white); }
+.foot .brand img { width: 40px; }
+.foot .brand { margin-bottom: 16px; }
+.foot p { color: rgba(255,255,255,.7); max-width: 34em; font-size: 15px; }
+.legal { margin-top: 48px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13.5px; color: rgba(255,255,255,.55); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+@media (max-width: 900px) { .foot { grid-template-columns: 1fr 1fr; gap: 32px; } .foot > div:first-child { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .foot { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .work { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER / NAVIGATIE
+     ============================================================ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Give a Day, naar boven">
+      <img src="images/g-purple.png" alt="">
+      <span>Give a Day</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="#wat">Wat is het</a>
+      <a href="#hoe">Hoe het werkt</a>
+      <a href="#impact">Kies je impact</a>
+      <a href="#klanten">Klanten</a>
+      <a href="#platform">Platform</a>
+      <a class="btn btn-lime" href="#contact">Start vandaag</a>
+    </nav>
+  </div>
+  <div class="gradbar"></div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================
+     SECTIE 1: HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="inner">
+      <div class="eyebrow">Sociale teambuildings &amp; bedrijfsvrijwilligerswerk</div>
+      <h1>Maak meer maatschappelijke impact met jouw team</h1>
+      <p class="lead">Sociale teambuildings en bedrijfsvrijwilligerswerk op maat, waar collega's bijdragen aan echte uitdagingen bij non-profitorganisaties. Omdat <strong>betekenisvolle ervaringen teams versterken</strong>.</p>
+      <div class="actions">
+        <a class="btn btn-lime" href="#contact">Start vandaag <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#impact">Bekijk het aanbod</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 2: CIJFERS
+     ============================================================ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="n">10 <em>tot</em> 1000</div><div class="c">collega's per teambuilding</div></div>
+    <div class="stat"><div class="n">½ <em>of</em> 1 dag</div><div class="c">de handen uit de mouwen</div></div>
+    <div class="stat"><div class="n">12 <em>werken</em></div><div class="c">om het verschil te maken</div></div>
+    <div class="stat"><div class="n">12.000<em>+</em></div><div class="c">non-profitpartners in België</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 3: WAT IS EEN SOCIALE TEAMBUILDING?
+     ============================================================ -->
+<section id="wat" class="wat" data-theme="dark">
+  <div class="wrap two-col">
+    <div>
+      <div class="copy">
+      <div class="eyebrow">Wat is een sociale teambuilding?</div>
+      <h2>Plezier én <span class="script">impact</span>, op één dag</h2>
+      <p class="lead">Een sociale teambuilding combineert plezier en maatschappelijke impact. Samen met je team, van 10 tot 1000 personen, steek je een halve of hele dag de handen uit de mouwen bij een goed doel.</p>
+      <p>Werk aan thema's zoals milieu, zorg, ouderen of vluchtelingen, ondersteun kwetsbare groepen of zet je professionele skills in. Zo versterk je niet alleen je team, maar ook lokale vrijwilligersorganisaties en goede doelen.</p>
+    </div>
+    </div>
+    <img class="photo" src="images/tuinwerken.jpg" alt="Een vrijwilliger werkt in de tuin tijdens een sociale teambuilding" loading="lazy">
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 4: HOE HET WERKT
+     ============================================================ -->
+<section id="hoe">
+  <div class="wrap two-col stretch">
+    <img class="photo fill" src="images/hoe-werkt-het.jpg" alt="Twee vrouwen in gesprek tijdens een sociale teambuilding" loading="lazy">
+    <div>
+      <div class="eyebrow">Hoe het werkt</div>
+      <h2>Jij kiest, wij regelen</h2>
+      <div class="steps">
+        <div class="step"><span class="num">Stap 01</span><div><h3>Thema</h3><p>Kies een thema dat bij je bedrijf past: van natuur en zorg tot onderwijs of je eigen expertise.</p></div></div>
+        <div class="step"><span class="num">Stap 02</span><div><h3>The perfect match</h3><p>Wij regelen de perfecte vrijwilligersactiviteit bij een non-profit uit ons netwerk, volledig op maat van je team.</p></div></div>
+        <div class="step"><span class="num">Stap 03</span><div><h3>Impact</h3><p>Jullie maken impact en gaan naar huis met een warm gevoel. Wij zorgen dat alles vlot verloopt.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 5: KIES JE IMPACT (12 werken)
+     De 12 werken staan als data onderaan in het <script>-blok (WORKS).
+     Daar pas je titels, teasers, beschrijvingen en voorbeelden aan.
+     ============================================================ -->
+<section id="impact" data-theme="tint">
+  <div class="wrap">
+    <div class="eyebrow">Kies je impact</div>
+    <h2>XII werken voor sociale en ecologische <span class="script">impact</span></h2>
+    <p class="lead">Samen met de goede doelen definieerden we twaalf werken met de meest voorkomende noden aan helpende handen en hersenen. Elk werk draagt bij aan de Duurzame Ontwikkelingsdoelstellingen (SDG's) van de Verenigde Naties. Klik op een werk voor meer uitleg en voorbeelden.</p>
+    <div class="works" id="worksGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 6: WAAROM
+     ============================================================ -->
+<section id="waarom" data-theme="lilac">
+  <div class="wrap">
+    <div class="eyebrow">Waarom kiezen voor een sociale teambuilding?</div>
+    <h2>Goed voor je team, goed voor de samenleving</h2>
+    <div class="reasons">
+      <div class="reason"><span class="script">sterkere</span><h3>Teams</h3><p>Samen iets goeds doen, schept een band.</p></div>
+      <div class="reason"><span class="script">echte</span><h3>Employer branding</h3><p>Een bedrijf met een sociaal hart trekt talent aan.</p></div>
+      <div class="reason"><span class="script">meetbare</span><h3>MVO in actie</h3><p>Geen vage beloftes, maar échte impact.</p></div>
+      <div class="reason"><span class="script">meer</span><h3>Werkgeluk</h3><p>Vrijwilligerswerk boost motivatie en welzijn.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 7: FOTOBAND
+     ============================================================ -->
+<section class="band" style="padding: 20px 0;">
+  <div class="wrap">
+    <img src="images/expertise.jpg" alt="Een vrijwilliger werkt geconcentreerd aan tafel" loading="lazy">
+    <div class="block"><span class="script">mensen helpen mensen</span><div class="display">Dat is het hele idee.</div></div>
+    <img src="images/op-stap-rolstoel.jpg" alt="Collega's op stap met mensen in een rolstoel" loading="lazy">
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 8: WAT ONZE KLANTEN ZEGGEN
+     ============================================================ -->
+<section id="klanten" data-theme="dark">
+  <div class="wrap">
+    <div class="eyebrow">Wat onze klanten deden in 2025</div>
+    <h2>Teams die al <span class="script">iets doen</span></h2>
+    <div class="cases">
+      <article class="case">
+        <div class="co">BNP Paribas Fortis</div>
+        <div class="big">2.080 kg<br>zwerfvuil</div>
+        <p>Tijdens de Clean-Up Weeks trokken 681 collega's de straat op in 10 Belgische steden. Wij regelden de routes, het materiaal en de opwarmquiz. Zij zorgden voor propere straten.</p>
+      </article>
+      <article class="case">
+        <div class="co">Etex</div>
+        <div class="big">90 collega's<br>10 missies, 1 voormiddag</div>
+        <p>Scheidingswanden voor drie studio's, een nieuwe fietsenstalling, maaltijden voor mensen in nood en een hoop klusjes. Alles op één ochtend, met materiaal geschonken door Etex.</p>
+      </article>
+      <article class="case">
+        <div class="co">Johnson &amp; Johnson</div>
+        <div class="big">Jong en oud<br>samen in het park</div>
+        <p>Een internationaal J&amp;J-team, kinderen van een Freinetschool en bewoners van een woonzorgcentrum in Turnhout: een voormiddag vol gesprekken en frisse lucht. Sindsdien bouwen we samen de J&amp;J Care Community in België uit.</p>
+      </article>
+    </div>
+    <div class="quotes">
+      <div class="quote"><span class="mark">"</span><p>Een ongelooflijk impactvolle ervaring, die tegelijk de ogen opende en intens was.</p><cite>Deelnemer impactdag 2025</cite></div>
+      <div class="quote"><span class="mark">"</span><p>Fijn contact met doelgroepen waar we normaal nooit mee in aanraking komen.</p><cite>Deelnemer impactdag 2025</cite></div>
+      <div class="quote"><span class="mark">"</span><p>Heel goed georganiseerd. We leerden de mensen echt kennen en voelden de impact van het samen doen.</p><cite>Deelnemer impactdag 2025</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 9: PLATFORM + HANDLEIDING
+     ============================================================ -->
+<section id="platform">
+  <div class="wrap">
+    <div class="eyebrow">Meer dan één dag impact</div>
+    <h2>Van teambuilding naar <span class="script">community</span></h2>
+    <div class="tracks">
+      <div class="track a">
+        <img class="mock" src="images/corporate-platform.png" alt="Het Give a Day corporate vrijwilligersplatform op een laptop" loading="lazy">
+        <div class="body">
+          <div class="eyebrow">Corporate vrijwilligersplatform</div>
+          <h3>Jouw eigen vrijwilligerscentrale</h3>
+          <p>Betrek je medewerkers het hele jaar rond sociale impact met een platform op maat van je bedrijf. Bouw je eigen ecosysteem van impact, partners en collega's, en connecteer met het grootste non-profitnetwerk van België.</p>
+          <a class="btn btn-black" href="#contact">Vraag een demo <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div class="track b">
+        <div class="body">
+          <div class="eyebrow">Wil je liever zelf aan de slag?</div>
+          <h3>Download onze handleiding</h3>
+          <p>Een verhelderende gids die je stap voor stap toont hoe je zelf een sociale teambuilding opzet: van themakeuze tot de dag zelf.</p>
+          <a class="btn btn-lime" href="handleiding-sociale-teambuilding.pdf" download>Download nu <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 10: OVER ONS + PARTNERS
+     Partnerlogo's: vervang de tekst in <li> door <img src="images/naam.png" alt="Naam">.
+     ============================================================ -->
+<section id="over" data-theme="tint">
+  <div class="wrap">
+    <div class="two-col">
+      <img class="photo" src="images/team.jpg" alt="Het Give a Day team">
+      <div class="copy">
+        <div class="eyebrow">Over ons</div>
+        <h2>Give a Day</h2>
+        <p class="lead">Give a Day verbindt mensen, bedrijven en scholen met lokale non-profitorganisaties. Via ons platform brengen we vrijwilligers samen met meer dan 12.000 partners om een positieve impact te maken.</p>
+        <p>Onze missie? Zo veel mogelijk mensen inspireren om zich in te zetten voor een betere wereld. Doe mee en organiseer een sociale teambuilding die niet alleen je team versterkt, maar ook de samenleving.</p>
+      </div>
+    </div>
+    <div class="partners">
+      <p class="muted">Een aantal van onze trotse partners</p>
+      <ul>
+        <li>Johnson &amp; Johnson</li>
+        <li>Telenet Group</li>
+        <li>Deloitte</li>
+        <li>McKinsey</li>
+        <li>Schneider Electric</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 11: EINDBLOK
+     ============================================================ -->
+<div class="gradbar"></div>
+<section class="cta-final" data-theme="dark">
+  <div class="wrap">
+    <span class="script">iets doen</span>
+    <h2>is makkelijker dan ooit<br><span class="lm">ook met je hele team</span></h2>
+    <p class="lead">Vertel ons over je team en je thema. Wij regelen de perfecte activiteit en jullie gaan naar huis met een warm gevoel.</p>
+    <a class="btn btn-lilac" href="#contact">Start vandaag <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTIE 12: CONTACT
+     Formulier werkt via Formspree. Vervang JOUW_FORM_ID door de ID
+     uit je Formspree-account (gratis, formspree.io).
+     ============================================================ -->
+<section id="contact" class="contact">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Contacteer <span class="script">ons</span></h2>
+      <p class="lead">Vertel ons kort iets over je team en wat je voor ogen hebt. We nemen snel contact op met een voorstel op maat.</p>
+      <div class="contact-details">Liever meteen mailen?<br><a href="mailto:info@giveaday.eu">info@giveaday.eu</a> · <a href="https://www.giveaday.eu" target="_blank" rel="noopener">giveaday.eu</a></div>
+    </div>
+    <form id="contactform" action="https://formspree.io/f/JOUW_FORM_ID" method="POST">
+      <div class="field"><label for="voornaam">Voornaam</label><input id="voornaam" name="voornaam" required autocomplete="given-name"></div>
+      <div class="field"><label for="achternaam">Achternaam</label><input id="achternaam" name="achternaam" required autocomplete="family-name"></div>
+      <div class="field"><label for="bedrijf">Bedrijf</label><input id="bedrijf" name="bedrijf" required autocomplete="organization"></div>
+      <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="telefoon">Telefoon</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="interesse">Interesse</label><select id="interesse" name="interesse" required>
+        <option value="" disabled selected>Maak een keuze</option>
+        <option>Sociale teambuilding</option>
+        <option>Vrijwilligersplatform</option>
+        <option>Beide / advies gevraagd</option>
+      </select></div>
+      <div class="field"><label for="teamgrootte">Teamgrootte</label><select id="teamgrootte" name="teamgrootte" required>
+        <option value="" disabled selected>Maak een keuze</option>
+        <option>Minder dan 10</option>
+        <option>10 tot 25</option>
+        <option>25 tot 75</option>
+        <option>75 tot 150</option>
+        <option>Meer dan 150</option>
+      </select></div>
+      <div class="field"><label for="regio">Regio</label><select id="regio" name="regio" required>
+        <option value="" disabled selected>Maak een keuze</option>
+        <option>Vlaanderen</option>
+        <option>Brussel</option>
+        <option>Wallonië</option>
+        <option>Buiten België</option>
+      </select></div>
+      <div class="field full"><label for="boodschap">Boodschap</label><textarea id="boodschap" name="boodschap" placeholder="Bv. teambuilding voor 60 collega's rond natuur, in september"></textarea></div>
+      <label class="check"><input type="checkbox" name="nieuwsbrief" value="ja"> Schrijf me in voor de nieuwsbrief</label>
+      <!-- Tracking: wordt automatisch ingevuld door het script onderaan -->
+      <input type="hidden" name="bron" value="socialteambuildings.com">
+      <input type="hidden" name="pagina" id="f_pagina">
+      <input type="hidden" name="utm_source" id="f_utm_source">
+      <input type="hidden" name="utm_medium" id="f_utm_medium">
+      <input type="hidden" name="utm_campaign" id="f_utm_campaign">
+      <input type="hidden" name="referrer" id="f_referrer">
+      <input type="hidden" name="_subject" value="Nieuwe aanvraag via socialteambuildings.com">
+      <input type="hidden" name="_next" id="f_next">
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+      <button class="btn btn-lime" type="submit">Verstuur <span class="arr">→</span></button>
+      <div class="form-note" id="formnote" role="status"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="images/g-white.png" alt=""><span>Give a Day</span></a>
+        <p>Sociale teambuildings en bedrijfsvrijwilligerswerk op maat, waar collega's bijdragen aan echte uitdagingen bij non-profitorganisaties.</p>
+      </div>
+      <div>
+        <h4>Ontdek</h4>
+        <ul>
+          <li><a href="#wat">Wat is een sociale teambuilding</a></li>
+          <li><a href="#impact">Kies je impact</a></li>
+          <li><a href="#platform">Corporate vrijwilligersplatform</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Give a Day</h4>
+        <ul>
+          <li><a href="https://www.giveaday.eu" target="_blank" rel="noopener">giveaday.eu</a></li>
+          <li><a href="mailto:info@giveaday.eu">info@giveaday.eu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Volg ons</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/give-a-day-belgium/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/giveaday.be" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@giveaday9339" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Give a Day. Alle rechten voorbehouden.</span>
+      <span>Give a Day is een Belgische sociale coöperatie.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MODAL: detail van een werk
+     ============================================================ -->
+<dialog class="workmodal" id="workModal">
+  <div class="wm-head">
+    <div>
+      <span class="bar" id="wmBar"></span>
+      <h3 id="wmTitle"></h3>
+      <span class="wm-sdg" id="wmSdg"></span>
+    </div>
+    <button class="wm-close" type="button" onclick="document.getElementById('workModal').close()" aria-label="Sluiten">✕</button>
+  </div>
+  <div class="wm-body">
+    <p id="wmDesc"></p>
+    <h4>Bijvoorbeeld</h4>
+    <ul id="wmList"></ul>
+    <a class="btn btn-lime" href="#contact" onclick="document.getElementById('workModal').close()">Plan deze teambuilding <span class="arr">→</span></a>
+  </div>
+</dialog>
+
+<script>
+/* ============================================================
+   DE 12 WERKEN
+   Hier pas je titel, teaser (op de kaart), beschrijving, SDG en
+   voorbeelden aan. Kleur: lime, lilac, cyan, green of blue.
+   ============================================================ */
+const WORKS = [
+  {title:"Werk I · Dagelijkse feestkost", color:"lime", sdg:"SDG 2 · Geen honger",
+   teaser:"Kook en smul samen.",
+   desc:"Samen gezond koken voor of met mensen in armoede, personen met een handicap of jongeren. Zet je kooktalent aan het werk en smul samen van de culinaire hoogstandjes.",
+   ex:["Feestmaal, spaghettidag of pannenkoekenfestijn","Proevertjeswandeling","Kookateliers met de doelgroep"]},
+  {title:"Werk II · Jouw bedrijfsexpertise", color:"lilac", sdg:"SDG 9 · Industrie, innovatie en infrastructuur",
+   teaser:"Professionaliseer een goed doel.",
+   desc:"Je zet de vaardigheden van je bedrijf in om goede doelen te helpen professionaliseren. Je tilt met jouw expertise de impact van het goede doel naar een volgend niveau.",
+   ex:["Website bouwen","Communicatieplan of campagne uitwerken","Financieel plan of fondsenwerving opzetten"]},
+  {title:"Werk III · Goede doel event hulp", color:"cyan", sdg:"SDG 1 · Geen armoede",
+   teaser:"Vele handen op hun event.",
+   desc:"Je helpt het goede doel op hun event. Vele helpende handen voor vele lachende gezichtjes.",
+   ex:["Themadag voor kwetsbare bewoners","Sinterklaasfeest voor kinderen in moeilijke gezinssituaties","Vlaamse kermis, verjaardagsfeest of kerstdiner voor ouders in armoede"]},
+  {title:"Werk IV · Knutselen, crea en spelletjes", color:"green", sdg:"SDG 4 · Kwaliteitsonderwijs",
+   teaser:"Laat de kunstenaar in je team los.",
+   desc:"Je begeleidt mee creatieve workshops en gaat aan de slag met kinderen, vluchtelingen of mensen met een handicap. Laat de kunstenaars in jezelf en je team volledig gaan.",
+   ex:["Petanque spelen of samen kleuren","Wenskaarten maken of pottenbakken","Knutselen met recyclagemateriaal"]},
+  {title:"Werk V · Logistieke hulp en klusjes", color:"blue", sdg:"SDG 9 · Industrie, innovatie en infrastructuur",
+   teaser:"Praktische hulp die telt.",
+   desc:"Je helpt de voorziening met praktische hulp en draait een dag mee in de dagelijkse logistieke werking.",
+   ex:["Verjaardagspakketten inpakken voor kinderen in armoede","Klusjes opknappen samen met bewoners","Materialen klaarzetten en magazijnwerk"]},
+  {title:"Werk VI · Rap op stap", color:"lime", sdg:"SDG 3 · Goede gezondheid en welzijn",
+   teaser:"Bezorg iemand een topdag.",
+   desc:"Samen ga je op stap met jongeren, mensen met een handicap of senioren. Voor hen is een uitstap niet altijd evident. Jij bezorgt hen een van de fijnste dagen van hun leven.",
+   ex:["Wandelen in de natuur of samen fietsen","Bowling of film","Pretpark of dierentuin"]},
+  {title:"Werk VII · Renovatie- en bouwwerken", color:"lilac", sdg:"SDG 9 · Industrie, innovatie en infrastructuur",
+   teaser:"Bouw aan betere plekken.",
+   desc:"Je helpt zorgvoorzieningen in de leefbaarheid van hun leefruimtes en gebouwen. De gasten genieten van jouw bouw- en renovatiekunsten.",
+   ex:["Ruimtes verfraaien en verven","Nieuwe loods bouwen of animatie aanleggen, binnen en buiten","Timmeren met pallethout voor een zintuigenparcours"]},
+  {title:"Werk VIII · Samen sporten", color:"cyan", sdg:"SDG 3 · Goede gezondheid en welzijn",
+   teaser:"Een gezonde geest in een gezond lichaam.",
+   desc:"Samen met senioren en mensen met een handicap sla je aan het sporten. Trek je sportieve outfit maar aan en smeer die kuiten in.",
+   ex:["Basketten, joggen of voetballen","Rolstoeldansen","Zwemmen"]},
+  {title:"Werk IX · Speak-up onderwijs", color:"green", sdg:"SDG 4 · Kwaliteitsonderwijs",
+   teaser:"Deel taal en kennis.",
+   desc:"Je helpt kwetsbare doelgroepen door te praten en versterkt hun (taal)vaardigheden op de lange termijn.",
+   ex:["Voorlezen voor kinderen","Anderstaligen en vluchtelingen Nederlands leren","Huiswerkbegeleiding voor kwetsbare gezinnen"]},
+  {title:"Werk X · (Dieren)therapie en wellness", color:"blue", sdg:"SDG 3 · Goede gezondheid en welzijn",
+   teaser:"Ontspanning voor wie het nodig heeft.",
+   desc:"Tijd voor ontspanning en therapie. Samen gaan we voor het mentaal welzijn van onze kwetsbaarsten.",
+   ex:["Massage en wellness voor de doelgroep","Dierenzorgtherapie","Meditatie"]},
+  {title:"Werk XI · Tuin- en natuurwerken", color:"lime", sdg:"SDG 13 · Klimaatactie",
+   teaser:"Klimaatactie met je team.",
+   desc:"Je gaat voor klimaatactie met je team en legt nieuw groen aan bij zorg- en natuurorganisaties. Impact op de biodiversiteit gegarandeerd.",
+   ex:["Grootse boomplantactie","Tuinklussen en natuurwerken","Nieuw groen aanleggen"]},
+  {title:"Werk XII · De grootste zwerfvuilverzamelaar", color:"lilac", sdg:"SDG 15 · Leven op het land",
+   teaser:"Word het meest mooimakende bedrijf.",
+   desc:"Je verbetert de biodiversiteit door zwerfvuil te verzamelen, zowel in stedelijke omgeving als in kwetsbare natuur. We doen dit in competitievorm tussen teams en bedrijven. Op het einde van elk jaar maken we de winnaars bekend.",
+   ex:["Clean-up in de buurt van je kantoor","Opruimactie in kwetsbare natuur","Competitie tussen teams en bedrijven"]}
+];
+
+// Kaarten renderen
+const grid = document.getElementById('worksGrid');
+grid.innerHTML = WORKS.map((w, i) => `
+  <button class="work" type="button" data-i="${i}">
+    <span class="bar" style="background:var(--${w.color})"></span>
+    <h3>${w.title}</h3>
+    <p>${w.teaser}</p>
+    <span class="more">Meer info →</span>
+  </button>`).join('');
+grid.addEventListener('click', e => {
+  const b = e.target.closest('.work'); if (!b) return;
+  const w = WORKS[b.dataset.i];
+  document.getElementById('wmBar').style.background = 'var(--' + w.color + ')';
+  document.getElementById('wmTitle').textContent = w.title;
+  document.getElementById('wmSdg').textContent = w.sdg;
+  document.getElementById('wmDesc').textContent = w.desc;
+  document.getElementById('wmList').innerHTML = w.ex.map(x => `<li>${x}</li>`).join('');
+  document.getElementById('workModal').showModal();
+});
+document.getElementById('workModal').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+
+// Mobiel menu
+(function () {
+  const t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+  t.addEventListener('click', () => { const open = n.classList.toggle('open'); t.setAttribute('aria-expanded', open); t.textContent = open ? 'Sluit' : 'Menu'; });
+  n.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { n.classList.remove('open'); t.textContent = 'Menu'; t.setAttribute('aria-expanded', 'false'); }));
+})();
+
+// Contactformulier via Formspree
+// Trackingvelden invullen (pagina, UTM's, referrer) en na verzenden doorsturen naar bedankt.html
+(function () {
+  const f = document.getElementById('contactform'), note = document.getElementById('formnote');
+  const q = new URLSearchParams(location.search);
+  document.getElementById('f_pagina').value = location.href.split('#')[0];
+  ['source','medium','campaign'].forEach(k => { document.getElementById('f_utm_' + k).value = q.get('utm_' + k) || ''; });
+  document.getElementById('f_referrer').value = document.referrer || '';
+  document.getElementById('f_next').value = location.origin + location.pathname.replace(/[^/]*$/, '') + 'bedankt.html?src=teambuilding';
+  f.addEventListener('submit', e => {
+    if (f.action.includes('JOUW_FORM_ID')) {
+      e.preventDefault();
+      note.className = 'form-note err';
+      note.textContent = 'Het formulier is nog niet gekoppeld: vervang JOUW_FORM_ID in index.html door je Formspree-ID.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
